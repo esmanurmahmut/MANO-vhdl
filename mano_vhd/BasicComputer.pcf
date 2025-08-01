@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jul 30 10:49:17 2025
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P36" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "P33" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "P32" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "P27" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "P26" LEVEL 1;
+COMP "ps2_code_new" LOCATE = SITE "P15" LEVEL 1;
+COMP "ps2_clk" LOCATE = SITE "P85" LEVEL 1;
+COMP "kontrol" LOCATE = SITE "P4" LEVEL 1;
+COMP "ps2_data" LOCATE = SITE "P86" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "P23" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "P43" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "P16" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "P22" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "P24" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "P42" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

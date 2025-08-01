@@ -1,0 +1,10 @@
+Command line:
+   BasicComputer_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49880
+
+Wed Jul 30 10:40:12 2025
+
+
+ Elaboration Time: 0.05 sec

@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/mano_vhd/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/mano_vhd/xst"
+elaborate
+-ifn Display.prj
+-ifmt mixed

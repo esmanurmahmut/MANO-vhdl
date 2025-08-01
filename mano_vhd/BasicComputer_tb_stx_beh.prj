@@ -1,0 +1,8 @@
+vhdl isim_temp "../ortakk/debounce.vhd"
+vhdl isim_temp "../ortakk/ps2_keyboard.vhd"
+vhdl isim_temp "../ortakk/ps2_keyboard_to_ascii.vhd"
+vhdl isim_temp "memory2.vhd"
+vhdl isim_temp "Display.vhd"
+vhdl isim_temp "clock_divider_1hz.vhd"
+vhdl isim_temp "BasicComputer.vhd"
+vhdl isim_temp "BasicComputer_tb.vhd"

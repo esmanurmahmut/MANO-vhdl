@@ -1,0 +1,45 @@
+V3 31
+FL /home/ise/mano_vhd/BasicComputer.vhd 2025/07/30.10:49:01 P.20131013
+EN work/BasicComputer 1753872557 FL /home/ise/mano_vhd/BasicComputer.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/BasicComputer/Behavioral 1753872558 \
+      FL /home/ise/mano_vhd/BasicComputer.vhd EN work/BasicComputer 1753872557 \
+      CP memory2 CP ps2_keyboard_to_ascii CP clock_divider_1hz CP Display
+FL /home/ise/mano_vhd/clock_divider_1hz.vhd 2025/07/30.07:25:10 P.20131013
+EN work/clock_divider_1hz 1753872553 FL /home/ise/mano_vhd/clock_divider_1hz.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/clock_divider_1hz/Behavioral 1753872554 \
+      FL /home/ise/mano_vhd/clock_divider_1hz.vhd EN work/clock_divider_1hz 1753872553
+FL /home/ise/mano_vhd/Display.vhd 2025/07/29.11:55:43 P.20131013
+EN work/Display 1753872555 FL /home/ise/mano_vhd/Display.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Display/Behavioral 1753872556 \
+      FL /home/ise/mano_vhd/Display.vhd EN work/Display 1753872555
+FL /home/ise/mano_vhd/ipcore_dir/memory.vhd 2025/07/28.12:35:50 P.20131013
+EN work/memory 1753706514 FL /home/ise/mano_vhd/ipcore_dir/memory.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/memory/memory_a 1753706515 \
+      FL /home/ise/mano_vhd/ipcore_dir/memory.vhd EN work/memory 1753706514
+FL /home/ise/mano_vhd/memory2.vhd 2025/07/30.10:45:12 P.20131013
+EN work/memory2 1753872549 FL /home/ise/mano_vhd/memory2.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/memory2/Behavioral 1753872550 \
+      FL /home/ise/mano_vhd/memory2.vhd EN work/memory2 1753872549
+FL /home/ise/ortakk/debounce.vhd 2025/07/29.05:51:14 P.20131013
+EN work/debounce 1753872545 FL /home/ise/ortakk/debounce.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/debounce/logic 1753872546 \
+      FL /home/ise/ortakk/debounce.vhd EN work/debounce 1753872545
+FL /home/ise/ortakk/ps2_keyboard.vhd 2025/07/28.09:05:23 P.20131013
+EN work/ps2_keyboard 1753872547 FL /home/ise/ortakk/ps2_keyboard.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ps2_keyboard/logic 1753872548 \
+      FL /home/ise/ortakk/ps2_keyboard.vhd EN work/ps2_keyboard 1753872547 \
+      CP debounce
+FL /home/ise/ortakk/ps2_keyboard_to_ascii.vhd 2025/07/28.09:05:18 P.20131013
+EN work/ps2_keyboard_to_ascii 1753872551 \
+      FL /home/ise/ortakk/ps2_keyboard_to_ascii.vhd PB ieee/std_logic_1164 1381692176
+AR work/ps2_keyboard_to_ascii/behavior 1753872552 \
+      FL /home/ise/ortakk/ps2_keyboard_to_ascii.vhd EN work/ps2_keyboard_to_ascii 1753872551 \
+      CP ps2_keyboard
+FL /home/ise/turna2/ps2_keyboard.vhd 2025/06/14.19:25:13 P.20131013

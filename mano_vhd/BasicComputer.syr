@@ -1,0 +1,812 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Reading design: BasicComputer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BasicComputer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BasicComputer"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-vq100
+
+---- Source Options
+Top Module Name                    : BasicComputer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/ortakk/debounce.vhd" in Library work.
+Architecture logic of Entity debounce is up to date.
+Compiling vhdl file "/home/ise/ortakk/ps2_keyboard.vhd" in Library work.
+Architecture logic of Entity ps2_keyboard is up to date.
+Compiling vhdl file "/home/ise/mano_vhd/memory2.vhd" in Library work.
+Architecture behavioral of Entity memory2 is up to date.
+Compiling vhdl file "/home/ise/ortakk/ps2_keyboard_to_ascii.vhd" in Library work.
+Architecture behavior of Entity ps2_keyboard_to_ascii is up to date.
+Compiling vhdl file "/home/ise/mano_vhd/clock_divider_1hz.vhd" in Library work.
+Architecture behavioral of Entity clock_divider_1hz is up to date.
+Compiling vhdl file "/home/ise/mano_vhd/Display.vhd" in Library work.
+Architecture behavioral of Entity display is up to date.
+Compiling vhdl file "/home/ise/mano_vhd/BasicComputer.vhd" in Library work.
+Entity <basiccomputer> compiled.
+Entity <basiccomputer> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <BasicComputer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <memory2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ps2_keyboard_to_ascii> in library <work> (architecture <behavior>) with generics.
+	clk_freq = 50000000
+	ps2_debounce_counter_size = 8
+
+Analyzing hierarchy for entity <clock_divider_1hz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ps2_keyboard> in library <work> (architecture <logic>) with generics.
+	clk_freq = 50000000
+	debounce_counter_size = 8
+
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <logic>) with generics.
+	counter_size = 8
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <BasicComputer> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <fgo> in unit <BasicComputer> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <BasicComputer> analyzed. Unit <BasicComputer> generated.
+
+Analyzing Entity <memory2> in library <work> (Architecture <behavioral>).
+Entity <memory2> analyzed. Unit <memory2> generated.
+
+Analyzing generic Entity <ps2_keyboard_to_ascii> in library <work> (Architecture <behavior>).
+	clk_freq = 50000000
+	ps2_debounce_counter_size = 8
+Entity <ps2_keyboard_to_ascii> analyzed. Unit <ps2_keyboard_to_ascii> generated.
+
+Analyzing generic Entity <ps2_keyboard> in library <work> (Architecture <logic>).
+	clk_freq = 50000000
+	debounce_counter_size = 8
+Entity <ps2_keyboard> analyzed. Unit <ps2_keyboard> generated.
+
+Analyzing generic Entity <debounce> in library <work> (Architecture <logic>).
+	counter_size = 8
+Entity <debounce> analyzed. Unit <debounce> generated.
+
+Analyzing Entity <clock_divider_1hz> in library <work> (Architecture <behavioral>).
+Entity <clock_divider_1hz> analyzed. Unit <clock_divider_1hz> generated.
+
+Analyzing Entity <Display> in library <work> (Architecture <behavioral>).
+Entity <Display> analyzed. Unit <Display> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <memory2>.
+    Related source file is "/home/ise/mano_vhd/memory2.vhd".
+    Found 4096x16-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 16-bit register for signal <dout_reg>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <memory2> synthesized.
+
+
+Synthesizing Unit <clock_divider_1hz>.
+    Related source file is "/home/ise/mano_vhd/clock_divider_1hz.vhd".
+    Found 1-bit register for signal <clk_reg>.
+    Found 24-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clock_divider_1hz> synthesized.
+
+
+Synthesizing Unit <Display>.
+    Related source file is "/home/ise/mano_vhd/Display.vhd".
+    Found 16x7-bit ROM for signal <seg>.
+    Found 1-of-4 decoder for signal <an>.
+    Found 4-bit 4-to-1 multiplexer for signal <digit_data>.
+    Found 2-bit up counter for signal <digit_selector>.
+    Found 16-bit up counter for signal <refresh_counter>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <Display> synthesized.
+
+
+Synthesizing Unit <debounce>.
+    Related source file is "/home/ise/ortakk/debounce.vhd".
+    Found 1-bit register for signal <result>.
+    Found 9-bit up counter for signal <counter_out>.
+    Found 1-bit xor2 for signal <counter_set>.
+    Found 2-bit register for signal <flipflops>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <ps2_keyboard>.
+    Related source file is "/home/ise/ortakk/ps2_keyboard.vhd".
+    Found 1-bit register for signal <ps2_code_new>.
+    Found 8-bit register for signal <ps2_code>.
+    Found 12-bit up counter for signal <count_idle>.
+    Found 1-bit xor9 for signal <error$xor0000> created at line 83.
+    Found 11-bit register for signal <ps2_word>.
+    Found 2-bit register for signal <sync_ffs>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <ps2_keyboard> synthesized.
+
+
+Synthesizing Unit <ps2_keyboard_to_ascii>.
+    Related source file is "/home/ise/ortakk/ps2_keyboard_to_ascii.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | ready                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit register for signal <ascii_code>.
+    Found 1-bit register for signal <ascii_new>.
+    Found 8-bit register for signal <ascii>.
+    Found 1-bit register for signal <break>.
+    Found 1-bit register for signal <caps_lock>.
+    Found 1-bit register for signal <control_l>.
+    Found 1-bit register for signal <control_r>.
+    Found 1-bit register for signal <e0_code>.
+    Found 1-bit register for signal <prev_ps2_code_new>.
+    Found 1-bit register for signal <shift_l>.
+    Found 1-bit register for signal <shift_r>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  24 D-type flip-flop(s).
+Unit <ps2_keyboard_to_ascii> synthesized.
+
+
+Synthesizing Unit <BasicComputer>.
+    Related source file is "/home/ise/mano_vhd/BasicComputer.vhd".
+    Found finite state machine <FSM_1> for signal <timeCount_reg>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 69                                             |
+    | Inputs             | 17                                             |
+    | Outputs            | 14                                             |
+    | Clock              | clk_1Hz                   (rising_edge)        |
+    | Clock enable       | timeCount_reg$not0000     (positive)           |
+    | Reset              | timeCount_reg$or0000      (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <interrupt_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk_1Hz                   (rising_edge)        |
+    | Clock enable       | interrupt_state$not0000   (positive)           |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit register for signal <AC>.
+    Found 16-bit adder for signal <AC$add0000> created at line 224.
+    Found 12-bit register for signal <AR>.
+    Found 12-bit adder for signal <AR$addsub0000> created at line 252.
+    Found 16-bit register for signal <DR>.
+    Found 16-bit adder for signal <DR$addsub0000> created at line 257.
+    Found 1-bit register for signal <E>.
+    Found 1-bit register for signal <fgi_int>.
+    Found 1-bit register for signal <I>.
+    Found 1-bit register for signal <ien>.
+    Found 1-bit register for signal <interrupt>.
+    Found 2-bit comparator less for signal <interrupt_state$cmp_lt0000> created at line 183.
+    Found 16-bit register for signal <IR>.
+    Found 12-bit register for signal <mem_addr>.
+    Found 16-bit register for signal <mem_din>.
+    Found 2-bit up counter for signal <mem_wait>.
+    Found 1-bit register for signal <mem_we<0>>.
+    Found 1-bit 8-to-1 multiplexer for signal <mem_we_0$mux0000> created at line 208.
+    Found 8-bit register for signal <OUTR_reg>.
+    Found 12-bit register for signal <PC>.
+    Found 12-bit adder for signal <PC$share0000> created at line 194.
+    Found 1-bit register for signal <S>.
+    Found 17-bit adder for signal <temp_sum$add0000> created at line 240.
+    Found 12-bit register for signal <TR_backup>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred 127 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <BasicComputer> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x16-bit single-port RAM                           : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 12-bit adder                                          : 2
+ 16-bit adder                                          : 2
+ 17-bit adder                                          : 1
+# Counters                                             : 7
+ 12-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 24-bit up counter                                     : 1
+ 9-bit up counter                                      : 2
+# Registers                                            : 77
+ 1-bit register                                        : 66
+ 11-bit register                                       : 1
+ 12-bit register                                       : 4
+ 16-bit register                                       : 3
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 1
+ 2-bit comparator less                                 : 1
+# Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <interrupt_state/FSM> on signal <interrupt_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <timeCount_reg/FSM> on signal <timeCount_reg[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 000
+ 0001  | 001
+ 0010  | 011
+ 0011  | 010
+ 0100  | 110
+ 0101  | 111
+ 0110  | 101
+ 0111  | 100
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <ps2_inst/state/FSM> on signal <state[1:2]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ ready     | 00
+ new_code  | 01
+ translate | 10
+ output    | 11
+-----------------------
+
+Synthesizing (advanced) Unit <BasicComputer>.
+INFO:Xst:3226 - The RAM <mem_inst/Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <mem_inst/dout_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 16-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <mem_we>        | high     |
+    |     addrA          | connected to signal <mem_addr>      |          |
+    |     diA            | connected to signal <mem_din>       |          |
+    |     doA            | connected to signal <mem_dout>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <BasicComputer> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x16-bit single-port block RAM                     : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 12-bit adder                                          : 2
+ 16-bit adder                                          : 2
+ 17-bit adder                                          : 1
+# Counters                                             : 7
+ 12-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 24-bit up counter                                     : 1
+ 9-bit up counter                                      : 2
+# Registers                                            : 187
+ Flip-Flops                                            : 187
+# Comparators                                          : 1
+ 2-bit comparator less                                 : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 3
+ 1-bit xor2                                            : 2
+ 1-bit xor9                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <IR_15> in Unit <BasicComputer> is equivalent to the following FF/Latch, which will be removed : <I> 
+
+Optimizing unit <BasicComputer> ...
+
+Optimizing unit <ps2_keyboard> ...
+
+Optimizing unit <ps2_keyboard_to_ascii> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BasicComputer, actual ratio is 52.
+FlipFlop ps2_inst/ps2_keyboard_0/ps2_code_1 has been replicated 1 time(s)
+FlipFlop ps2_inst/ps2_keyboard_0/ps2_code_2 has been replicated 1 time(s)
+FlipFlop ps2_inst/ps2_keyboard_0/ps2_code_5 has been replicated 1 time(s)
+FlipFlop ps2_inst/ps2_keyboard_0/ps2_code_6 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <BasicComputer> :
+	Found 2-bit shift register for signal <ps2_inst/ps2_keyboard_0/debounce_ps2_data/flipflops_0>.
+	Found 2-bit shift register for signal <ps2_inst/ps2_keyboard_0/debounce_ps2_clk/flipflops_0>.
+Unit <BasicComputer> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 260
+ Flip-Flops                                            : 260
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : BasicComputer.ngr
+Top Level Output File Name         : BasicComputer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 44
+
+Cell Usage :
+# BELS                             : 1236
+#      GND                         : 1
+#      INV                         : 21
+#      LUT1                        : 117
+#      LUT2                        : 71
+#      LUT2_D                      : 12
+#      LUT2_L                      : 4
+#      LUT3                        : 130
+#      LUT3_D                      : 14
+#      LUT3_L                      : 11
+#      LUT4                        : 380
+#      LUT4_D                      : 43
+#      LUT4_L                      : 98
+#      MUXCY                       : 139
+#      MUXF5                       : 49
+#      MUXF6                       : 2
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 142
+# FlipFlops/Latches                : 262
+#      FD                          : 9
+#      FD_1                        : 11
+#      FDC                         : 24
+#      FDCE                        : 1
+#      FDE                         : 78
+#      FDR                         : 18
+#      FDRE                        : 118
+#      FDRSE                       : 1
+#      FDS                         : 1
+#      FDSE                        : 1
+# RAMS                             : 4
+#      RAMB16_S4                   : 4
+# Shift Registers                  : 2
+#      SRL16                       : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 43
+#      IBUF                        : 11
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100evq100-4 
+
+ Number of Slices:                      466  out of    960    48%  
+ Number of Slice Flip Flops:            262  out of   1920    13%  
+ Number of 4 input LUTs:                903  out of   1920    47%  
+    Number used as logic:               901
+    Number used as Shift registers:       2
+ Number of IOs:                          44
+ Number of bonded IOBs:                  44  out of     66    66%  
+ Number of BRAMs:                         4  out of      4   100%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------+-----------------------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)                   | Load  |
+-----------------------------------------------+-----------------------------------------+-------+
+clock_divider/clk_reg1                         | BUFG                                    | 133   |
+clk                                            | BUFGP                                   | 124   |
+ps2_inst/ps2_keyboard_0/debounce_ps2_clk/result| NONE(ps2_inst/ps2_keyboard_0/ps2_word_0)| 11    |
+-----------------------------------------------+-----------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 25    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.942ns (Maximum Frequency: 91.393MHz)
+   Minimum input arrival time before clock: 6.205ns
+   Maximum output required time after clock: 8.197ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_divider/clk_reg1'
+  Clock period: 10.092ns (frequency: 99.088MHz)
+  Total number of paths / destination ports: 7796 / 327
+-------------------------------------------------------------------------
+Delay:               10.092ns (Levels of Logic = 8)
+  Source:            DR_4 (FF)
+  Destination:       PC_0 (FF)
+  Source Clock:      clock_divider/clk_reg1 rising
+  Destination Clock: clock_divider/clk_reg1 rising
+
+  Data Path: DR_4 to PC_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.591   0.844  DR_4 (DR_4)
+     LUT4:I0->O            1   0.704   0.499  PC_cmp_eq000525 (PC_cmp_eq000525)
+     LUT4:I1->O            2   0.704   0.622  PC_cmp_eq000576 (PC_cmp_eq0005)
+     LUT4:I0->O            1   0.704   0.000  PC_mux0000<0>1261 (PC_mux0000<0>1261)
+     MUXF5:I1->O           1   0.321   0.424  PC_mux0000<0>126_f5 (PC_mux0000<0>126)
+     LUT4_L:I3->LO         1   0.704   0.104  PC_mux0000<0>1116 (PC_mux0000<0>1116)
+     LUT4:I3->O           12   0.704   0.961  PC_mux0000<0>1148 (N0)
+     MUXF5:S->O            1   0.739   0.455  PC_mux0000<0>_SW0_SW0 (N109)
+     LUT3:I2->O            1   0.704   0.000  PC_mux0000<0> (PC_mux0000<0>)
+     FDRE:D                    0.308          PC_11
+    ----------------------------------------
+    Total                     10.092ns (6.183ns logic, 3.909ns route)
+                                       (61.3% logic, 38.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.942ns (frequency: 91.393MHz)
+  Total number of paths / destination ports: 5684 / 220
+-------------------------------------------------------------------------
+Delay:               10.942ns (Levels of Logic = 8)
+  Source:            ps2_inst/ps2_keyboard_0/ps2_code_0 (FF)
+  Destination:       ps2_inst/ascii_4 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ps2_inst/ps2_keyboard_0/ps2_code_0 to ps2_inst/ascii_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             56   0.591   1.349  ps2_inst/ps2_keyboard_0/ps2_code_0 (ps2_inst/ps2_keyboard_0/ps2_code_0)
+     LUT3:I1->O            1   0.704   0.424  ps2_inst/ascii_0_or0003244_SW0 (N142)
+     LUT4_L:I3->LO         1   0.704   0.135  ps2_inst/ascii_0_or0003244 (ps2_inst/ascii_0_or0003244)
+     LUT4:I2->O            2   0.704   0.451  ps2_inst/ascii_0_or00032117 (ps2_inst/N9)
+     LUT4:I3->O            9   0.704   0.824  ps2_inst/ascii_0_or0010 (ps2_inst/ascii_0_or0010)
+     LUT4:I3->O            6   0.704   0.673  ps2_inst/ascii_4_mux00001_SW0 (N692)
+     LUT4:I3->O            2   0.704   0.451  ps2_inst/ascii_4_mux00001 (ps2_inst/N01)
+     LUT4_L:I3->LO         1   0.704   0.104  ps2_inst/ascii_4_mux0000101_SW0 (N180)
+     LUT4:I3->O            1   0.704   0.000  ps2_inst/ascii_4_mux0000127 (ps2_inst/ascii_4_mux0000)
+     FDE:D                     0.308          ps2_inst/ascii_4
+    ----------------------------------------
+    Total                     10.942ns (6.531ns logic, 4.411ns route)
+                                       (59.7% logic, 40.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ps2_inst/ps2_keyboard_0/debounce_ps2_clk/result'
+  Clock period: 1.532ns (frequency: 652.742MHz)
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Delay:               1.532ns (Levels of Logic = 0)
+  Source:            ps2_inst/ps2_keyboard_0/ps2_word_2 (FF)
+  Destination:       ps2_inst/ps2_keyboard_0/ps2_word_1 (FF)
+  Source Clock:      ps2_inst/ps2_keyboard_0/debounce_ps2_clk/result falling
+  Destination Clock: ps2_inst/ps2_keyboard_0/debounce_ps2_clk/result falling
+
+  Data Path: ps2_inst/ps2_keyboard_0/ps2_word_2 to ps2_inst/ps2_keyboard_0/ps2_word_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             5   0.591   0.633  ps2_inst/ps2_keyboard_0/ps2_word_2 (ps2_inst/ps2_keyboard_0/ps2_word_2)
+     FD_1:D                    0.308          ps2_inst/ps2_keyboard_0/ps2_word_1
+    ----------------------------------------
+    Total                      1.532ns (0.899ns logic, 0.633ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_divider/clk_reg1'
+  Total number of paths / destination ports: 145 / 145
+-------------------------------------------------------------------------
+Offset:              6.205ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       mem_addr_0 (FF)
+  Destination Clock: clock_divider/clk_reg1 rising
+
+  Data Path: reset to mem_addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            44   1.218   1.301  reset_IBUF (reset_IBUF)
+     LUT3:I2->O            4   0.704   0.762  interrupt_state_FSM_FFd2-In11 (interrupt_state_FSM_N0)
+     LUT4:I0->O           12   0.704   0.961  mem_addr_not00011 (mem_addr_not0001)
+     FDE:CE                    0.555          mem_addr_0
+    ----------------------------------------
+    Total                      6.205ns (3.181ns logic, 3.024ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.059ns (Levels of Logic = 1)
+  Source:            ps2_data (PAD)
+  Destination:       ps2_inst/ps2_keyboard_0/debounce_ps2_data/Mshreg_flipflops_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: ps2_data to ps2_inst/ps2_keyboard_0/debounce_ps2_data/Mshreg_flipflops_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  ps2_data_IBUF (ps2_data_IBUF)
+     SRL16:D                   0.421          ps2_inst/ps2_keyboard_0/debounce_ps2_data/Mshreg_flipflops_0
+    ----------------------------------------
+    Total                      2.059ns (1.639ns logic, 0.420ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 101 / 20
+-------------------------------------------------------------------------
+Offset:              8.070ns (Levels of Logic = 4)
+  Source:            disp/digit_selector_0 (FF)
+  Destination:       seg<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: disp/digit_selector_0 to seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.591   1.175  disp/digit_selector_0 (disp/digit_selector_0)
+     LUT3:I0->O            1   0.704   0.000  disp/Mmux_digit_data_31 (disp/Mmux_digit_data_31)
+     MUXF5:I1->O           7   0.321   0.883  disp/Mmux_digit_data_2_f5_0 (disp/digit_data<1>)
+     LUT4:I0->O            1   0.704   0.420  disp/Mrom_seg41 (seg_4_OBUF)
+     OBUF:I->O                 3.272          seg_4_OBUF (seg<4>)
+    ----------------------------------------
+    Total                      8.070ns (5.592ns logic, 2.478ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_divider/clk_reg1'
+  Total number of paths / destination ports: 126 / 18
+-------------------------------------------------------------------------
+Offset:              8.197ns (Levels of Logic = 4)
+  Source:            IR_14 (FF)
+  Destination:       seg<3> (PAD)
+  Source Clock:      clock_divider/clk_reg1 rising
+
+  Data Path: IR_14 to seg<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            47   0.591   1.302  IR_14 (IR_14)
+     LUT3:I2->O            1   0.704   0.000  disp/Mmux_digit_data_32 (disp/Mmux_digit_data_32)
+     MUXF5:I1->O           7   0.321   0.883  disp/Mmux_digit_data_2_f5_1 (disp/digit_data<2>)
+     LUT4:I0->O            1   0.704   0.420  disp/Mrom_seg31 (seg_3_OBUF)
+     OBUF:I->O                 3.272          seg_3_OBUF (seg<3>)
+    ----------------------------------------
+    Total                      8.197ns (5.592ns logic, 2.605ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 3.58 secs
+ 
+--> 
+
+
+Total memory usage is 657384 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

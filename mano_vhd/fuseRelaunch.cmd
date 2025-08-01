@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/mano_vhd/BasicComputer_isim_beh.exe" -prj "/home/ise/mano_vhd/BasicComputer_beh.prj" "work.BasicComputer" 

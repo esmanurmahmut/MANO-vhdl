@@ -1,0 +1,7 @@
+work	"../ortakk/debounce.vhd"
+work	"../ortakk/ps2_keyboard.vhd"
+work	"../ortakk/ps2_keyboard_to_ascii.vhd"
+work	"BasicComputer.vhd"
+work	"Display.vhd"
+work	"clock_divider_1hz.vhd"
+work	"memory2.vhd"

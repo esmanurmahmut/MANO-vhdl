@@ -1,0 +1,16 @@
+EN display NULL /home/ise/mano_vhd/Display.vhd sub00/vhpl14 1753872555
+AR basiccomputer behavioral /home/ise/mano_vhd/BasicComputer.vhd sub00/vhpl03 1753872558
+AR display behavioral /home/ise/mano_vhd/Display.vhd sub00/vhpl15 1753872556
+EN ps2_keyboard_to_ascii NULL /home/ise/ortakk/ps2_keyboard_to_ascii.vhd sub00/vhpl08 1753872551
+EN basiccomputer NULL /home/ise/mano_vhd/BasicComputer.vhd sub00/vhpl02 1753872557
+AR memory2 behavioral /home/ise/mano_vhd/memory2.vhd sub00/vhpl11 1753872550
+EN debounce NULL /home/ise/ortakk/debounce.vhd sub00/vhpl04 1753872545
+AR debounce logic /home/ise/ortakk/debounce.vhd sub00/vhpl05 1753872546
+EN memory NULL /home/ise/mano_vhd/ipcore_dir/memory.vhd sub00/vhpl00 1753706514
+AR memory memory_a /home/ise/mano_vhd/ipcore_dir/memory.vhd sub00/vhpl01 1753706515
+EN ps2_keyboard NULL /home/ise/ortakk/ps2_keyboard.vhd sub00/vhpl06 1753872547
+AR ps2_keyboard logic /home/ise/ortakk/ps2_keyboard.vhd sub00/vhpl07 1753872548
+AR ps2_keyboard_to_ascii behavior /home/ise/ortakk/ps2_keyboard_to_ascii.vhd sub00/vhpl09 1753872552
+AR clock_divider_1hz behavioral /home/ise/mano_vhd/clock_divider_1hz.vhd sub00/vhpl13 1753872554
+EN clock_divider_1hz NULL /home/ise/mano_vhd/clock_divider_1hz.vhd sub00/vhpl12 1753872553
+EN memory2 NULL /home/ise/mano_vhd/memory2.vhd sub00/vhpl10 1753872549
